@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joalheria Luxo - Carrinho</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cart-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        .cart-item {
+            display: grid;
+            grid-template-columns: 120px 1fr auto;
+            gap: 20px;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .cart-item-img {
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            background: #f5f5f5;
+        }
+        .cart-item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .cart-summary {
+            background: #f9f9f9;
+            padding: 30px;
+            border: 1px solid #eee;
+            height: fit-content;
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .summary-total {
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <div class="header-left">
+            <span class="icon-btn">🔍</span>
+        </div>
+        <div class="logo">
+            <a href="index.html">
+                <img src="nobre ouro.png" alt="JOALHERIA LUXO">
+            </a>
+        </div>
+        <div class="header-right">
+            <a href="criar-conta.html" class="icon-btn">👤</a>
+            <a href="carrinho.html" class="icon-btn">🛒</a>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html">Cadastro</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="quem-somos.html">Contato</a></li>
+                <li><a href="carrinho.html" class="active">Carrinho</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 style="margin-top: 50px;">Seu Carrinho</h1>
+        
+        <div class="cart-grid">
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="cart-item-img">
+                        <img src="alianca rose.webp" alt="Aliança Ouro 18k">
+                    </div>
+                    <div>
+                        <h3>Aliança Rosê</h3>
+                        <p style="font-size: 12px; color: #777;">Tamanho: 18</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <p class="price">R$ 2.100,00</p>
+                        <a href="#" style="font-size: 12px; color: red;">Remover</a>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="cart-item-img">
+                        <img src="colar perolas.webp" alt="Gargantilha Ouro 18k">
+                    </div>
+                    <div>
+                        <h3>Colar perolado</h3>
+                        <p style="font-size: 12px; color: #777;">Comprimento: 45cm</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <p class="price">R$ 2.750,00</p>
+                        <a href="#" style="font-size: 12px; color: red;">Remover</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <h2 style="margin-bottom: 20px; font-size: 20px;">Resumo do Pedido</h2>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>R$ 4.850,00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Frete</span>
+                    <span style="color: green;">Grátis</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Total</span>
+                    <span>R$ 5.240,00</span>
+                </div>
+                <button class="btn btn-dark" style="width: 100%; margin-top: 20px;">Finalizar Compra</button>
+                <a href="produtos.html" style="display: block; text-align: center; margin-top: 15px; font-size: 14px;">Continuar Comprando</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                JOALHERIA LUXO &copy; 2026 - Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

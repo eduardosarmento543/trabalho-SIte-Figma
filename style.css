@@ -1,0 +1,303 @@
+/* Estilos Globais */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #D4AF37; /* Dourado */
+    --secondary-color: #F5F5F5; /* Cinza muito claro */
+    --accent-color: #B8860B; /* Dourado escuro */
+    --text-color: #333333;
+    --white: #FFFFFF;
+    --black: #000000;
+    --font-main: 'Playfair Display', serif;
+    --font-secondary: 'Montserrat', sans-serif;
+    --container-width: 1200px;
+    --bg-footer: #F0F0F0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-secondary);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+h1, h2, h3, .nav-links a {
+    font-family: var(--font-main);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Layout com Grid */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.header-left {
+    display: flex;
+    gap: 20px;
+}
+
+.logo {
+    grid-column: 2;
+    text-align: center;
+}
+
+.logo img {
+    max-height: 80px;
+    width: auto;
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.nav-bar {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.nav-links {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+    gap: 50px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 2;
+    padding-left: 80px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--bg-footer);
+    padding: 60px 0 20px;
+    margin-top: 80px;
+}
+
+.newsletter {
+    text-align: center;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.newsletter h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.newsletter form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 15px;
+    max-width: 700px;
+    margin: 30px auto 0;
+}
+
+.newsletter input {
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-family: var(--font-secondary);
+}
+
+.newsletter button {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 11px;
+    color: #666;
+    padding-top: 20px;
+}
+
+/* Grid de Produtos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.product-card {
+    background: #fff;
+    padding: 0;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid #f0f0f0;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.product-image {
+    width: 100%;
+    height: 350px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Categorias */
+.category-card {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.category-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: transform 0.5s;
+}
+
+.category-card:hover img {
+    transform: scale(1.1);
+}
+
+.category-card h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 24px;
+}
+
+/* Botões Gerais */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 14px;
+}
+
+.btn-dark {
+    background-color: var(--black);
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+.icon-btn {
+    font-size: 20px;
+}

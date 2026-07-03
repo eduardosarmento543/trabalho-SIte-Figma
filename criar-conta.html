@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joalheria Luxo - Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-container {
+            max-width: 500px;
+            margin: 60px auto;
+            padding: 40px;
+            background: #fff;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+        .form-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <div class="header-left">
+            <span>🔍</span>
+        </div>
+        <div class="logo">
+            JOALHERIA LUXO
+        </div>
+        <div class="header-right">
+            <a href="criar-conta.html">👤</a>
+            <a href="carrinho.html">🛒</a>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Cadastro</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="quem-somos.html">Contato</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="form-container">
+            <h1 style="margin-bottom: 40px;">Cadastro</h1>
+            <form>
+                <div class="form-group">
+                    <label>NOME COMPLETO</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>CELULAR COM DDD</label>
+                    <input type="tel" required>
+                </div>
+                <div class="form-group">
+                    <label>E-MAIL</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>CPF</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-checkbox">
+                    <input type="checkbox" required>
+                    <span>Li e concordo com os <strong>Termos de Privacidade</strong>.</span>
+                </div>
+                <button type="submit" class="btn btn-dark" style="width: 100%;">CADASTRAR</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div style="text-align: right; margin-bottom: 20px;">
+                <p style="font-size: 12px; font-weight: bold;">Formas de pagamento</p>
+            </div>
+            <div class="footer-bottom">
+                MC do comércio de joias LTDA - CNPJ: 12.345.678/0001-90 Endereço: Av. São Paulo, Número 10 - Juiz de Fora/Minas gerais CEP: 12.345-678
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
